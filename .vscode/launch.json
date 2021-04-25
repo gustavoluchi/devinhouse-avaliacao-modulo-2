@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<demo>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "br.com.devinhouse.demo.DemoApplication",
+      "projectName": "demo",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<demo>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "br.com.devinhouse.DemoApplication",
+      "projectName": "demo",
+      "args": ""
+    }
+  ]
+}
