@@ -1,3 +1,5 @@
+Projeto feito com MySQL. É preciso instalá-lo e iniciar o banco de dados. No OS Ubuntu, o comando é 'sudo service mysql start'.
+
 ## Projeto de Aplicação módulo 2 
 
 ### Descrição
