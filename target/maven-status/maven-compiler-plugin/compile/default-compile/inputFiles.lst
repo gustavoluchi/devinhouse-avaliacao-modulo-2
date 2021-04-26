@@ -1,6 +1,6 @@
-/home/gus/java/modulo2/avaliacao1/demo/src/main/java/br/com/devinhouse/service/ProcessoService.java
-/home/gus/java/modulo2/avaliacao1/demo/src/main/java/br/com/devinhouse/repository/ProcessoRepository.java
-/home/gus/java/modulo2/avaliacao1/demo/src/main/java/br/com/devinhouse/BuscaDeProcessosBackEnd.java
-/home/gus/java/modulo2/avaliacao1/demo/src/main/java/br/com/devinhouse/exceptions/CaseNotFoundException.java
-/home/gus/java/modulo2/avaliacao1/demo/src/main/java/br/com/devinhouse/model/Processo.java
-/home/gus/java/modulo2/avaliacao1/demo/src/main/java/br/com/devinhouse/controllers/ProcessoController.java
+/home/gus/java/modulo2/avaliacao1/av2/devinhouse-avaliacao-modulo-2/src/main/java/br/com/devinhouse/service/ServiceStatus.java
+/home/gus/java/modulo2/avaliacao1/av2/devinhouse-avaliacao-modulo-2/src/main/java/br/com/devinhouse/BuscaDeProcessosBackEnd.java
+/home/gus/java/modulo2/avaliacao1/av2/devinhouse-avaliacao-modulo-2/src/main/java/br/com/devinhouse/model/Processo.java
+/home/gus/java/modulo2/avaliacao1/av2/devinhouse-avaliacao-modulo-2/src/main/java/br/com/devinhouse/repository/ProcessoRepository.java
+/home/gus/java/modulo2/avaliacao1/av2/devinhouse-avaliacao-modulo-2/src/main/java/br/com/devinhouse/controllers/ProcessoController.java
+/home/gus/java/modulo2/avaliacao1/av2/devinhouse-avaliacao-modulo-2/src/main/java/br/com/devinhouse/service/ProcessoService.java

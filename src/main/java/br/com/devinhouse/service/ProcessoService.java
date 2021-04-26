@@ -2,6 +2,8 @@ package br.com.devinhouse.service;
 
 import java.util.Optional;
 
+import com.google.gson.Gson;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -21,7 +23,7 @@ public class ProcessoService {
     HttpHeaders header = new HttpHeaders();
     if (ProcessoRepository.existsById(Processo.getNuProcesso())) {
       header.add("Mensagem:", "Numero de processo ja existe");
-      return new ResponseEntity<>("Numero de processo ja existe.", header, HttpStatus.CONFLICT);
+      return new ResponseEntity<>(ServiceStatus.JSON(409, "Numero de processo ja existe."), header, HttpStatus.CONFLICT);
     }
     Processo.setChaveProcesso();
     ProcessoRepository.save(Processo);
@@ -36,7 +38,7 @@ public class ProcessoService {
     HttpHeaders header = new HttpHeaders();
     if (!ProcessoRepository.findById(id).isPresent()) {
       header.add("Mensagem:", "Processo nao encontrado");
-      return new ResponseEntity<>("Processo nao encontrado.", header, HttpStatus.NOT_FOUND);
+      return new ResponseEntity<String>(ServiceStatus.JSON(), header, HttpStatus.NOT_FOUND);
     }
     return new ResponseEntity<Optional<Processo>>(ProcessoRepository.findById(id), header, HttpStatus.OK);
   }
@@ -45,7 +47,7 @@ public class ProcessoService {
     HttpHeaders header = new HttpHeaders();
     if (!ProcessoRepository.findByChaveProcesso(chaveProcesso).isPresent()) {
       header.add("Mensagem:", "Processo nao encontrado");
-      return new ResponseEntity<>("Processo nao encontrado.", header, HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>(ServiceStatus.JSON(), header, HttpStatus.NOT_FOUND);
     }
     return new ResponseEntity<>(ProcessoRepository.findByChaveProcesso(chaveProcesso), header, HttpStatus.OK);
   }
@@ -56,9 +58,8 @@ public class ProcessoService {
       processoAtualizado.setChaveProcesso();
       ProcessoRepository.save(processoAtualizado);
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
     header.add("Mensagem:", "Processo nao encontrado");
-    return new ResponseEntity<>("Processo nao encontrado.", header, HttpStatus.NOT_FOUND);
+    return new ResponseEntity<>(ServiceStatus.JSON(), header, HttpStatus.NOT_FOUND);
   }
 
   public ResponseEntity<?> deletaProcesso(Long id) {
@@ -68,6 +69,6 @@ public class ProcessoService {
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     header.add("Mensagem:", "Processo nao encontrado");
-    return new ResponseEntity<>("Processo nao encontrado.", header, HttpStatus.NOT_FOUND);
+    return new ResponseEntity<>(ServiceStatus.JSON(), header, HttpStatus.NOT_FOUND);
   }
 }
