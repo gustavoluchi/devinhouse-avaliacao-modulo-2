@@ -1,4 +1,7 @@
-Projeto feito com MySQL. É preciso instalá-lo e iniciar o banco de dados. No OS Ubuntu, o comando é 'sudo service mysql start'.
+Projeto feito com MySQL. É preciso instalá-lo e iniciar o banco de dados. No OS Ubuntu, com MySQL instalado, o comando é 'sudo service mysql start'.
+Todas as requisições usam o formato JSON e a API tem versionamento na URL e no Header. Portanto, as requisições devem conter no header:
+api-version: 2021-04-21
+Content-Type: application/json
 
 ## Projeto de Aplicação módulo 2 
 
