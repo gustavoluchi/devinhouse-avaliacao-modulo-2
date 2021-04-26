@@ -58,6 +58,7 @@ public class ProcessoService {
       processoAtualizado.setChaveProcesso();
       ProcessoRepository.save(processoAtualizado);
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
     header.add("Mensagem:", "Processo nao encontrado");
     return new ResponseEntity<>(ServiceStatus.JSON(), header, HttpStatus.NOT_FOUND);
   }
